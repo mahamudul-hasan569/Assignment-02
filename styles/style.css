@@ -8,7 +8,6 @@
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  background-color: var(--bg-color);
 }
 
 /* shared style */
@@ -25,15 +24,19 @@
 }
 
 .btn-1 {
+  font-size: 1rem;
+  font-weight: 600;
   border-radius: 10000px;
   background: var(--main-gradient);
   border: none;
   padding: 12px 16px;
   color: white;
 }
+
 .hide {
   display: none;
 }
+
 .hr {
   border-bottom: 1px solid rgba(65, 37, 103, 1);
 }
@@ -42,6 +45,7 @@
 header {
   background-color: var(--bg-color);
 }
+
 .navbar-container {
   padding: 30px 0;
   max-width: 1200px;
@@ -49,10 +53,12 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-logo>img {
   width: 219px;
   height: 32px;
 }
+
 .nav-list {
   list-style: none;
   margin-left: 32px;
@@ -60,10 +66,83 @@ header {
 
 .nav-link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: white;
 }
+
+/* Podcast style */
+.about-the-podcast {
+  background-color: var(--bg-color);
+  padding: 50px 0 120px;
+}
+
+.podcast-text {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.podcast-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.podcast-border {
+  max-width: 1200px;
+  margin: 80px auto 80px;
+  opacity: 0.5;
+}
+
+.hrr {
+  border: 1px solid rgba(65, 37, 103, 1);
+  ;
+}
+
+.podcast-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+  justify-items: center;
+}
+
+.podcast-card {
+  text-align: center;
+}
+
+.podcast-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(0, 255, 136, 1);
+  margin-bottom: 16px;
+}
+
+.podcast-number-star {
+  font-size: 2.0rem;
+  font-weight: 600;
+}
+
+.podcast-number-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+}
+/* Why-choose-techwave-style */
+
 
 
 
@@ -76,14 +155,39 @@ header {
   .navbar-container {
     padding: 16px 20px;
   }
+
   .nav-logo>img {
-  width: 137px;
-  height: 20px;
-}
+    width: 137px;
+    height: 20px;
+  }
+
   .hide {
     display: block;
   }
-  .navbar-links, .navbar-button {
+
+  .navbar-links,
+  .navbar-button {
     display: none;
+  }
+
+  /* About-podcast */
+  .about-the-podcast {
+    padding: 40px 20px;
+  }
+
+  .podcast-border {
+    margin: 40px auto 40px;
+  }
+
+  .podcast-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+  }
+  .podcast-number {
+  font-size: 2.5rem;
   }
 }
