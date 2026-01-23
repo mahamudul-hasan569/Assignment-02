@@ -33,6 +33,17 @@
   border: none;
   padding: 12px 16px;
   color: white;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background-size: 200% 200%;
+}
+.btn-1:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-position: 100% 50%;
+}
+.btn-1:active{
+  transform: scale(0.95);
 }
 
 .hide {
@@ -101,6 +112,139 @@ header {
   font-weight: 500;
   color: white;
 }
+
+/* banner style */
+.banner {
+  background: url('../assets/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.banner-image {
+  margin: 101px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.circle {
+  overflow: hidden;
+  position: relative;
+  translate: 3%;
+}
+
+.banner-circle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  max-height: 350px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+.banner-logo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.microphone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  width: auto;
+  height: auto;
+  animation: micPulse 2.5s ease-in-out infinite;
+}
+@keyframes micPulse{
+  0%{
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50%{
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  100%{
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.badge {
+  max-width: 75px;
+  height: 35px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.badge-text {
+  font-weight: 600px;
+  font-size: 1.12rem;
+  color: #1A0B2A;
+  background-color: #00FF88;
+  padding: 8px 16px;
+  border-radius: 1000px;
+}
+
+.banner-title {
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.banner-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.banner-button {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00FF88;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #00FF88;
+  border-radius: 10000px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-2:hover{
+  background: #00FF88;
+  color: #000;
+  box-shadow: 0 0 10px #00FF88,
+              0 0 30px rgba(0,255,136,0.6);
+  transform: translateY(-2px);
+}
+.btn-2:active{
+  transform: scale(0.95);
+}
+
+
+
+
 
 /* Podcast style */
 .about-the-podcast {
@@ -244,17 +388,78 @@ header {
 .why-choose-card-5 {
   grid-area: card5;
 }
+
+/* Featured-Episodes */
+.Featured-Episodes {
+  background-color: var(--bg-color);
+  padding-top: 120px;
+}
+
+.feature-card-container {
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: var(--bg-color-3);
+  border-radius: 24px;
+  width: 400px;
+}
+
+.iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+}
+
+.iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.feature-card-text-container {
+  padding: 0 24px 24px 24px;
+}
+
+.time-badge {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.time-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(0, 255, 136, 1);
+  margin-left: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* meet-the-host-style */
 .meet-the-host {
   background-color: var(--bg-color);
   padding-bottom: 120px;
 }
+
 .host-name {
   font-size: 2rem;
   font-weight: 700;
   color: white;
   margin-bottom: 16px;
 }
+
 .items-container {
   align-items: center;
   gap: 30px;
@@ -262,6 +467,7 @@ header {
   background-color: var(--bg-color-3);
   border-radius: 40px;
 }
+
 .m {
   padding-top: 120px;
   margin-bottom: 40px;
@@ -272,6 +478,7 @@ header {
   gap: 8px;
   margin-top: 16px;
 }
+
 .social-circle {
   border: 1px solid rgba(83, 60, 114, 1);
   border-radius: 50%;
@@ -282,13 +489,50 @@ header {
   justify-content: center;
 }
 
+/* footer style */
+footer {
+  background: url('../assets/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
+.footer-container {
+  max-width: 544px;
+  padding: 120px 0;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.footer-logo {
+  max-width: 410px;
+  max-height: 60px;
+  object-fit: cover;
+}
 
+.social-icons-container {
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 40px;
+}
 
+.social-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  opacity: 0.6;
+}
 
-
-
+.social-text-2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  opacity: 0.6;
+  text-align: center;
+}
 
 
 
@@ -297,7 +541,9 @@ header {
 
   /* share style */
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    margin-bottom: 10px;
   }
 
   .card-title {
@@ -323,6 +569,39 @@ header {
   .navbar-links,
   .navbar-button {
     display: none;
+  }
+
+  /* banner style */
+  .banner-circle {
+    max-width: 188px;
+    max-height: 188px;
+
+  }
+
+  .microphone {
+    width: 35%;
+    width: 50px;
+    height: auto;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-text {
+    margin: 0 10px;
+  }
+
+  .banner-image {
+    margin: 50px 0;
+  }
+
+  .badge {
+    max-width: 75px;
+    height: 35px;
+    position: absolute;
+    top: 1%;
+    right: 1%;
   }
 
   /* About-podcast */
@@ -364,22 +643,82 @@ header {
     ;
 
   }
+
+  .Why-Choose-TechWave {
+    padding: 40px 0;
+  }
+
+  /* feature-episode */
+  .feature-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Featured-Episodes {
+    padding-top: 40px;
+  }
+
+  .feature-card-container {
+    margin: 0 20px;
+  }
+
+  .feature-card {
+    background-color: var(--bg-color-3);
+    border-radius: 24px;
+    width: 320px;
+  }
+
+
+
+
+
   /* host style */
   .items-container {
     flex-direction: column;
     padding: 20px;
   }
+
   .m {
     padding-top: 60px;
   }
+
+  .meet-the-host {
+    padding-bottom: 40px;
+  }
+
+  .items-container {
+    margin: 0 20px;
+  }
+
   .host-name {
     text-align: center;
     font-size: 1.5rem;
   }
+
   #host-card-description {
     text-align: center;
   }
+
   .host-social-links {
     justify-content: center;
+  }
+
+
+  /* footer style */
+  .footer-container {
+    padding: 40px 20px;
+  }
+
+  .footer-logo img {
+    max-width: 219px;
+    max-height: 32px;
+  }
+
+  .social-icons-container {
+    flex-wrap: wrap;
+    width: 255px;
+  }
+  .social-text-2 {
+    font-size: 0.8rem;
   }
 }
